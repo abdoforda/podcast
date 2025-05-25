@@ -71,6 +71,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="{{ asset('assets/svg/language.svg') }}" style="width: 28px;" alt="">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/change-language/en">@lang('English')</a></li>
+                                    <li><a class="dropdown-item" href="/change-language/ar">@lang('Arabic')</a></li>
+                                </ul>
+                            </li>
+                                    
                         </ul>
                         <div class="social-container mb-lg-0 mb-3">
                             <a href="https://www.youtube.com" class="social-item">
