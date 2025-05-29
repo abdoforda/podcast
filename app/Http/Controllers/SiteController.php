@@ -99,4 +99,17 @@ class SiteController extends Controller
         return view('pages.page', compact('page'));
     }
     
+
+    //blog_show
+    public function blog_show($slug) {
+
+
+        $post = Post::where('slug', $slug)->with('translations')->first();
+        // add view count
+        $post->views = $post->views + rand(1, 10);
+        $post->save();
+
+        return view('blog_show', compact('post'));
+    }
+
 }

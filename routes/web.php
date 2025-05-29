@@ -54,3 +54,5 @@ Route::group(['prefix' => 'adminsite'], function () {
     Route::post('translateUpdate', [AdminTowController::class, 'translateUpdate'])->name('admin2.translateUpdate');
     Route::post('translateUpdateOne', [AdminTowController::class, 'translateUpdateOne'])->name('admin2.translateUpdateOne');
 });
+
+Route::get('blog/{slug}', [SiteController::class, 'blog_show'])->name('blog_show');
